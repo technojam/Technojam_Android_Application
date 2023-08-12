@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/iv_tjLogo"
+        android:layout_width="@dimen/_150dp"
+        android:layout_height="150dp"
+        android:layout_margin="@dimen/_10dp"
+        android:contentDescription="@string/tj_logo"
+        android:src="@drawable/tj_title_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_tagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_tjLogo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="@string/throttle"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="@string/to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="@string/learn"
+            android:textColor="@color/light_magenta"
+            android:textSize="@dimen/_18sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
