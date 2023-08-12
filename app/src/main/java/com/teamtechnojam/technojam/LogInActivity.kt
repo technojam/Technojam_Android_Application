@@ -59,7 +59,7 @@ class LogInActivity : AppCompatActivity() {
         } else {
             Toast.makeText(
                 this@LogInActivity,
-                "Wrong User Name or Password!! please try again",
+                "Wrong User Name or Password!! please try again.",
                 Toast.LENGTH_SHORT
             ).show()
         }
