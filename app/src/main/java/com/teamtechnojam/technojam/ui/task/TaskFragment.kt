@@ -27,11 +27,6 @@ class TaskFragment : Fragment() {
 
         _binding = FragmentTaskBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        taskViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
