@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="@dimen/_5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_round_corner_background"
+        android:padding="@dimen/_15dp">
+
+        <TextView
+            android:id="@+id/tv_eventTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_black_bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/event_title"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewDivider1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_eventTitle" />
+
+        <TextView
+            android:id="@+id/tv_eventDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/sun_aug_12_2023"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewDivider1"
+            app:layout_constraintTop_toBottomOf="@+id/viewDivider1" />
+
+        <TextView
+            android:id="@+id/tv_eventDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="3"
+            android:text="@string/lorem_ipsum"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_eventDate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_eventDate" />
+
+        <View
+            android:id="@+id/viewDivider2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/viewDivider1"
+            app:layout_constraintStart_toStartOf="@+id/viewDivider1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_eventDescription" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="@id/viewDivider2"
+            app:layout_constraintStart_toStartOf="@id/viewDivider2"
+            app:layout_constraintTop_toBottomOf="@id/viewDivider2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_feedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/feedback_btn_background"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/feedback"
+                android:textAllCaps="false"
+                android:textColor="@color/light_blue" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_resources"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/resources_btn_background"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/resources"
+                android:textAllCaps="false"
+                android:textColor="@color/purple" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
