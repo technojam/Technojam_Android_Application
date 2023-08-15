@@ -51,8 +51,13 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    //Lottie
     implementation "com.airbnb.android:lottie:6.0.1"
 
+    //carousal Recycler view
     implementation 'com.github.sparrow007:carouselrecyclerview:1.2.6'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 
 }

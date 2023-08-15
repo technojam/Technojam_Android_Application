@@ -79,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5dp"
+                android:textColor="@color/grey"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/team_lead" />
 
@@ -106,7 +107,7 @@
             app:layout_constraintTop_toBottomOf="@id/viewDivider2">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_feedback"
+                android:id="@+id/btn_accept"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5dp"
@@ -118,7 +119,7 @@
                 android:textColor="@color/light_blue" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_resources"
+                android:id="@+id/btn_decline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5dp"
