@@ -53,4 +53,7 @@
     <string name="mark_done">Mark Done</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
+    <string name="trending">Trending Topics</string>
+    <string name="title">Title</string>
+    <string name="learn_more">Learn More</string>
 </resources>

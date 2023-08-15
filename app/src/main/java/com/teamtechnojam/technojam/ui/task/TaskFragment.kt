@@ -4,17 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.LinearLayout.VERTICAL
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.teamtechnojam.technojam.adapter.YourTaskAdapter
 import com.teamtechnojam.technojam.databinding.FragmentTaskBinding
+import com.teamtechnojam.technojam.model.YourTaskModel
 
 class TaskFragment : Fragment() {
 
     private var _binding: FragmentTaskBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,8 +26,31 @@ class TaskFragment : Fragment() {
             ViewModelProvider(this).get(TaskViewModel::class.java)
 
         _binding = FragmentTaskBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        return root
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val listTask = ArrayList<YourTaskModel>()
+
+        listTask.add(YourTaskModel("Web Poster Design", "Team Lead"))
+        listTask.add(YourTaskModel("Android Application Update", "Android Lead"))
+        listTask.add(YourTaskModel("Web Application Update", "Web Dev Lead"))
+        listTask.add(YourTaskModel("Flutter Application UI", "Android Lead"))
+        listTask.add(YourTaskModel("API Integrating", "Team Lead"))
+        listTask.add(YourTaskModel("Web Application API", "Web Dev Lead"))
+
+        val adapter = YourTaskAdapter(requireContext(), listTask)
+
+        binding.rvYourTask.adapter = adapter
+
+        binding.rvYourTask.apply {
+            setAlpha(true)
+            setInfinite(false)
+            setOrientation(VERTICAL)
+        }
+
     }
 
     override fun onDestroyView() {
