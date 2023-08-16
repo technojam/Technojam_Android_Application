@@ -12,10 +12,11 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.imageview.ShapeableImageView
 import com.teamtechnojam.technojam.R
 import com.teamtechnojam.technojam.model.MembersModel
+import com.teamtechnojam.technojam.model.TrendingModel
 
 class MembersAdapter(
     private val context: Context,
-    private val membersList: ArrayList<MembersModel>
+    private var membersList: ArrayList<MembersModel>
 ) : RecyclerView.Adapter<MembersAdapter.ViewHolder>() {
 
     inner class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
@@ -51,6 +52,10 @@ class MembersAdapter(
 
     override fun getItemCount(): Int {
         return membersList.size
+    }
+    fun filter(filterList: ArrayList<MembersModel>) {
+        membersList = filterList
+        notifyDataSetChanged()
     }
 
 

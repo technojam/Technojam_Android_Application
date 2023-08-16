@@ -1,16 +1,20 @@
 package com.teamtechnojam.technojam
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.teamtechnojam.technojam.adapter.MembersAdapter
 import com.teamtechnojam.technojam.databinding.ActivityOurTeamBinding
 import com.teamtechnojam.technojam.model.MembersModel
+import com.teamtechnojam.technojam.model.TrendingModel
 
 class OurTeamActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOurTeamBinding
     private lateinit var membersList: ArrayList<MembersModel>
+    private lateinit var adapter:MembersAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,10 +26,24 @@ class OurTeamActivity : AppCompatActivity() {
         }
         getDataInList()
 
-        val adapter = MembersAdapter(this@OurTeamActivity, membersList)
+        adapter = MembersAdapter(this@OurTeamActivity, membersList)
         binding.rvMembersList.layoutManager =
             GridLayoutManager(this@OurTeamActivity, 2, GridLayoutManager.VERTICAL, false)
         binding.rvMembersList.adapter = adapter
+
+        binding.svSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // Not needed for this case
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                filterMembers(s.toString())
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                //Noting to do
+            }
+        })
 
     }
 
@@ -70,5 +88,13 @@ class OurTeamActivity : AppCompatActivity() {
             )
         )
 
+    }
+    private fun filterMembers(query: String) {
+        query.let { searchText ->
+            val filteredList = membersList.filter { item ->
+                item.memberName.contains(searchText, ignoreCase = true)
+            }
+            adapter.filter(filteredList as ArrayList<MembersModel>)
+        }
     }
 }

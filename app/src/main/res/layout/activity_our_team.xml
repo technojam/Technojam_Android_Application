@@ -16,6 +16,27 @@
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/sv_search"
+        android:singleLine="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@drawable/search_bar_background"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/_5dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_vertical"
+        android:hint="@string/search_member"
+        android:padding="@dimen/_10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -31,7 +52,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+        app:layout_constraintTop_toBottomOf="@id/sv_search" />
 
     <View
         android:id="@+id/view2"
