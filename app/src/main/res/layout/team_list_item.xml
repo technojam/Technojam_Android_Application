@@ -41,6 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/iv_memberImage" />
 
         <TextView
+            android:id="@+id/tv_memberPosition"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5dp"
