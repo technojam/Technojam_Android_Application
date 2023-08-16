@@ -57,4 +57,5 @@
     <string name="title">Title</string>
     <string name="learn_more">Learn More</string>
     <string name="about_technojam">About TechnoJam</string>
+    <string name="search_member">Search Member...</string>
 </resources>
