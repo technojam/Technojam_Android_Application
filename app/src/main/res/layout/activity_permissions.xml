@@ -130,6 +130,7 @@
         android:layout_marginStart="@dimen/_20dp"
         android:layout_marginTop="@dimen/_15dp"
         android:layout_marginEnd="@dimen/_20dp"
+        android:imeOptions="actionDone"
         android:background="@drawable/white_round_corner_background"
         android:fontFamily="@font/poppins_regular"
         android:gravity="top"

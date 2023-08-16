@@ -74,13 +74,10 @@ class HomeFragment : Fragment() {
 
         adapter = TrendingAdapter(requireContext(), list)
 
+        binding.rvTendingList.layoutManager = LinearLayoutManager(requireContext())
         binding.rvTendingList.adapter = adapter
 
-        binding.rvTendingList.apply {
-            set3DItem(true)
-            setAlpha(true)
-            setFadingEdgeLength(10)
-        }
+
 
         binding.svSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -100,7 +97,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun filterTopics(query: String) {
-        query?.let { searchText ->
+        query.let { searchText ->
             val filteredList = list.filter { item ->
                 item.topicTitle.contains(searchText, ignoreCase = true)
             }
