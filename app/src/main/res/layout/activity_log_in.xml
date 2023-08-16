@@ -74,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:imeOptions="actionNext"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sp" />
 
@@ -109,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="textPassword"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sp" />
 

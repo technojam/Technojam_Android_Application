@@ -89,6 +89,15 @@
                 app:shapeAppearanceOverlay="@style/CircleImage" />
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_linkedin"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_margin="@dimen/_5dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_linkedin"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/iv_facebook"
                 android:layout_width="@dimen/_50dp"
                 android:layout_height="@dimen/_50dp"
