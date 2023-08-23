@@ -29,7 +29,8 @@
             android:src="@drawable/tj_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tj_logo_updated" />
 
         <LinearLayout
             android:id="@+id/ll_form"

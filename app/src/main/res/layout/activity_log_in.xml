@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10dp"
         android:contentDescription="@string/tj_logo"
-        android:src="@drawable/tj_logo"
+        android:src="@drawable/tj_logo_updated"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="@+id/cardView" />
