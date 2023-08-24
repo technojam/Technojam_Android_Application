@@ -13,7 +13,7 @@
         android:layout_height="150dp"
         android:layout_margin="@dimen/_10dp"
         android:contentDescription="@string/tj_logo"
-        android:src="@drawable/tj_title_logo"
+        android:src="@drawable/tj_logo_updated"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

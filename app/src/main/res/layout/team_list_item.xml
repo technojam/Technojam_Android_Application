@@ -18,7 +18,7 @@
             android:layout_height="70dp"
             android:layout_margin="@dimen/_20dp"
             android:background="@drawable/blue_button_background"
-            android:src="@drawable/tj_logo"
+            android:src="@drawable/tj_logo_updated"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
